@@ -1,69 +1,43 @@
+@import "modern-normalize/modern-normalize.css";
+@import "assets/fonts/Roboto/roboto.css";
+@import "assets/fonts/Montserrat/Montserrat.css";
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  font-family: Roboto, Montserrat, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+
+  /* Colors */
+  --color-background: rgb(236 240 243);
+
+  /* Shadows */
+  --shadow-medium: 0 15px 20px 0 rgb(88 81 94 / 10%);
+
+  /* Fonts */
+  --font-h1: 600 24px/28px "Montserrat", sans-serif;
+  --font-h2: 600 20px/24px "Montserrat", sans-serif;
+  --font-h3: 600 16px/18px "Montserrat", sans-serif;
+  --font-text: 400 13px/16px "Roboto", sans-serif;
+  --font-caption: 400 12px/14px "Roboto", sans-serif;
+  --font-body: 400 14px/18px "Roboto", sans-serif;
+  --font-button: 500 16px/20px "Roboto", sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* height: 100%; */
+  background: var(--color-background);
+
+  /* color: black; */
+
+  font: var(--font-body);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+h2 {
+  font: var(--font-h2);
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
