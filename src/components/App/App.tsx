@@ -1,16 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Header } from '../Header/Header'
+import { Main } from '../Main/Main'
+import { About } from '../About/About'
+import { Skills } from '../Skills/Skills'
+import { Projects } from '../Projects/Projects'
+
 import './App.scss'
 
-function App() {
+export function App() {
+
+  const sections = document.querySelectorAll('section');
+  const navLink = document.querySelectorAll('nav a');
+  window.onscroll = () => {
+    sections.forEach(section => {
+      const top = window.scrollY;
+      const offset = section.offsetTop - 150;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (top > offset && top < offset + height) {
+        navLink.forEach(link => {
+          link.classList.remove('active');
+          document.querySelector('nav a[href*='+id+']')?.classList.add('active');
+        })
+      }
+    })
+  }
 
   return (
-    <>
-      <h2>Title</h2>
-      <p>start</p>
-    </>
+    <main className='page'>
+      <Header/>
+      <Main/>
+      <About />
+      <Skills />
+      <Projects />
+    </main>
   )
 }
-
-export default App
