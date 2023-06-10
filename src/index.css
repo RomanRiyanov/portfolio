@@ -17,7 +17,7 @@
   --color-blue: rgb(86 81 229);
 
   /* Shadows */
-  --shadow-medium: 0 15px 20px 0 rgb(88 81 94 / 10%);
+  --shadow-medium: 0 15px 20px 0 rgb(88 81 94 / 50%);
 
   /* Fonts */
   --font-h1: 700 60px/62px "Montserrat", sans-serif;

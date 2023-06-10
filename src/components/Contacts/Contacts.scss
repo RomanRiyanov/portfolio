@@ -1,5 +1,5 @@
 /* stylelint-disable declaration-block-no-redundant-longhand-properties */
-.skills {
+.contacts {
   display: flex;
   width: 100%;
 
@@ -7,29 +7,34 @@
   min-height: 100vh;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
   padding: 20px;
   gap: 20px;
 }
 
-.skills__title {
+.contacts__title {
   font: var(--font-h2);
 }
 
-.skills__subtitle {
+.contacts__subtitle {
   font: var(--font-h3);
 }
 
-.skills__container {
-  display: grid;
-  width: 100%;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.contacts__container {
+  display: flex;
+  align-self: center;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
 }
 
-.skill {
+.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  border-radius: 50%;
+}
+
+.contact__image {
+
 }
 

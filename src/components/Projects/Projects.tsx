@@ -23,8 +23,8 @@ export function Projects() {
       <h2 className="projects__subtitle">Что я уже сделал</h2>
       <div className="projects__container">
         {skills.map((item, index) => (
-          <div key={index} className="skill">
-            <img src={item.picture} alt="Skill icon" className="skill__image" />
+          <div key={index} className="project">
+            <img src={item.picture} alt="Skill icon" className="project__image" />
             <p className="text">{item.name}</p>
           </div>
         ))}

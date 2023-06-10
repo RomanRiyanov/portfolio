@@ -1,4 +1,4 @@
-import sputnik from '../../assets/images/sputnik.svg'
+import avatar from '../../assets/images/avatar.jpeg'
 import './About.scss'
 
 export function About() {
@@ -15,7 +15,7 @@ export function About() {
         </p>
       </article>
       <article className="image__container">
-          <img src={sputnik} alt="" className="image" />
+          <img src={avatar} alt="Avatar" className="image" />
       </article>
     </section>
   )
