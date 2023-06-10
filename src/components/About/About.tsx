@@ -15,7 +15,7 @@ export function About() {
         </p>
       </article>
       <article className="image__container">
-          <img src={avatar} alt="Avatar" className="image" />
+          <img src={avatar} alt="Avatar" className="about__image" />
       </article>
     </section>
   )

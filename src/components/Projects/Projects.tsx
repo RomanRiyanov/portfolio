@@ -1,20 +1,27 @@
 import './Projects.scss'
-import sputnik from '../../assets/images/sputnik.svg'
+import moodBeat from '../../assets/images/projects/moodbeat.png'
+import instagram from '../../assets/images/projects/instagram.png'
+import moviesSearch from '../../assets/images/projects/moviesSearch.png'
+import travelRussia from '../../assets/images/projects/travelRussia.png'
 
 export function Projects() {
 
   const skills = [
     {
-      name: 'JavaScript',
-      picture: sputnik
+      name: 'MoodBeat',
+      picture: moodBeat
     },
     {
-      name: 'JavaScript',
-      picture: sputnik
+      name: 'Instagram',
+      picture: instagram
     },
     {
-      name: 'JavaScript',
-      picture: sputnik
+      name: 'MoviesSearch',
+      picture: moviesSearch
+    },
+    {
+      name: 'TravelRussia',
+      picture: travelRussia
     }
   ]
   return (
@@ -25,7 +32,7 @@ export function Projects() {
         {skills.map((item, index) => (
           <div key={index} className="project">
             <img src={item.picture} alt="Skill icon" className="project__image" />
-            <p className="text">{item.name}</p>
+            {/* <p className="text">{item.name}</p> */}
           </div>
         ))}
       </div>

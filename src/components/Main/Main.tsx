@@ -1,8 +1,8 @@
 import './Main.scss'
 // import sputnik from '../../assets/images/sputnik.svg'
-import sputnik from '../../assets/images/space-station.svg'
+// import sputnik from '../../assets/images/space-station.svg'
 // import sputnik from '../../assets/images/satellite1.svg'
-// import sputnik from '../../assets/images/sputnik-round.png'
+import sputnik from '../../assets/images/sputnik-round.png'
 
 
 export function Main() {
