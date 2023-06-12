@@ -1,24 +1,24 @@
 import './Contacts.scss'
-import sputnik from '../../assets/images/sputnik.svg'
+import cv from '../../assets/contacts/cv.svg'
+import telegram from '../../assets/contacts/telegram.svg'
+import linkedin from '../../assets/contacts/linkedin.svg'
+import github from '../../assets/contacts/github.svg'
 
 export function Contacts() {
 
   const skills = [
     {
-      name: 'JavaScript',
-      picture: sputnik
+      cv: 'CV',
+      picture: cv
     },
     {
-      name: 'JavaScript',
-      picture: sputnik
+      picture: telegram
     },
     {
-      name: 'JavaScript',
-      picture: sputnik
+      picture: linkedin
     },
     {
-      name: 'JavaScript',
-      picture: sputnik
+      picture: github
     }
   ]
   return (
@@ -28,7 +28,10 @@ export function Contacts() {
       <div className="contacts__container">
         {skills.map((item, index) => (
           <div key={index} className="contact">
-            <img src={item.picture} alt="Contact icon" className="contact__image" />
+            {item.cv ?
+              <p className="contacts__title">{item.cv}</p> :
+              <img src={item.picture} alt="Contact icon" className="contact__image" />
+            }
           </div>
         ))}
       </div>

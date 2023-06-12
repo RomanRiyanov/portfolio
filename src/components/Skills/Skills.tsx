@@ -59,7 +59,7 @@ export function Skills() {
       picture: redux
     },
     {
-      name: 'SASS/SCSS',
+      name: 'Sass/SCSS',
       picture: sass
     },
     {

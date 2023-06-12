@@ -38,6 +38,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 80px;
   justify-items: center;
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  scale: 1.05;
 }
 
 .skill__image {

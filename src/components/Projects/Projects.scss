@@ -33,6 +33,12 @@
   background-color: white;
   box-shadow: var(--shadow-medium);
   gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  cursor: pointer;
+  scale: 1.03;
 }
 
 .project__image {
