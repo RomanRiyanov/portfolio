@@ -9,13 +9,13 @@ export function Main() {
 
   return (
     <section id="main" className="main">
-      <h1 className="main__title">
-        Привет, меня зовут Рома Риянов
+      <h1 className="main-title">
+        Привет, меня зовут <span>Рома Риянов</span>
       </h1>
-      <h2 className="main__title">
+      <h2 className="main-title">
         Я - фронт-энд разработчик
       </h2>
-      <img src={sputnik} alt="" className="main__image" />
+      <img src={sputnik} alt="Спутник" className="main-image" />
 
     </section>
   )

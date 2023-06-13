@@ -3,7 +3,7 @@
   z-index: 1;
   top: 0;
   display: flex;
-  width: 100%;
+  width: calc(100vw - 20px);
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
@@ -29,6 +29,7 @@
 
 .navbar__element {
   color: black;
+  font: var(--font-text);
   text-decoration: none;
   transition: all 0.3 ease-out;
 }
@@ -39,4 +40,10 @@
 
 .active {
   color: var(--color-blue);
+}
+
+@media (width <= 560px) {
+  .header, .navbar {
+    flex-direction: column;
+  }
 }

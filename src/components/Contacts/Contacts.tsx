@@ -9,16 +9,20 @@ export function Contacts() {
   const skills = [
     {
       cv: 'CV',
-      picture: cv
+      picture: cv,
+      link: 'https://github.com/RomanRiyanov/resume/blob/main/Frontend_developer_resume_Roman_Riyanov.pdf',
     },
     {
-      picture: telegram
+      picture: telegram,
+      link: 'https://t.me/yezgo'
     },
     {
-      picture: linkedin
+      picture: linkedin,
+      link: 'https://www.linkedin.com/in/roman-riyanov/'
     },
     {
-      picture: github
+      picture: github,
+      link: 'https://github.com/RomanRiyanov'
     }
   ]
   return (
@@ -27,12 +31,12 @@ export function Contacts() {
       <h2 className="contacts__subtitle">Как со мной можно связаться</h2>
       <div className="contacts__container">
         {skills.map((item, index) => (
-          <div key={index} className="contact">
+          <a href={item.link} target='_blank' key={index} className="contact">
             {item.cv ?
-              <p className="contacts__title">{item.cv}</p> :
+              <p className="contacts__cv">{item.cv}</p> :
               <img src={item.picture} alt="Contact icon" className="contact__image" />
             }
-          </div>
+          </a>
         ))}
       </div>
 

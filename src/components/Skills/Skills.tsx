@@ -13,42 +13,28 @@ import redux from '../../assets/images/skills/redux.svg'
 import sass from '../../assets/images/skills/sass.svg'
 import tailwind from '../../assets/images/skills/tailwind.svg'
 import typescript from '../../assets/images/skills/typescript.svg'
+import vite from '../../assets/images/skills/vite.svg'
+import webpack from '../../assets/images/skills/webpack.svg'
 
 
 export function Skills() {
 
   const skills = [
     {
-      name: 'CSS',
-      picture: css
-    },
-    {
-      name: 'ESLint',
-      picture: eslint
-    },
-    {
-      name: 'Figma',
-      picture: figma
-    },
-    {
-      name: 'Git',
-      picture: git
-    },
-    {
       name: 'HTML',
       picture: html
+    },
+    {
+      name: 'CSS',
+      picture: css
     },
     {
       name: 'JavaScript',
       picture: javascript
     },
     {
-      name: 'Jest',
-      picture: jest
-    },
-    {
-      name: 'Node.js',
-      picture: nodejs
+      name: 'TypeScript',
+      picture: typescript
     },
     {
       name: 'React',
@@ -67,18 +53,42 @@ export function Skills() {
       picture: tailwind
     },
     {
-      name: 'TypeScript',
-      picture: typescript
+      name: 'Git',
+      picture: git
+    },
+    {
+      name: 'Node.js',
+      picture: nodejs
+    },
+    {
+      name: 'Figma',
+      picture: figma
+    },
+    {
+      name: 'Jest',
+      picture: jest
+    },
+    {
+      name: 'ESLint',
+      picture: eslint
+    },
+    {
+      name: 'Vite',
+      picture: vite
+    },
+    {
+      name: 'Webpack',
+      picture: webpack
     },
   ]
   return (
     <section id="skills" className="skills">
-      <h3 className="skills__title">Скиллы</h3>
-      <h2 className="skills__subtitle">Что я могу</h2>
-      <div className="skills__container">
+      <h3 className="skills-title">Скиллы</h3>
+      <h2 className="skills-subtitle">Что я могу</h2>
+      <div className="skills-container">
         {skills.map((item, index) => (
           <div key={index} className="skill">
-            <img src={item.picture} alt="Skill icon" className="skill__image" />
+            <img src={item.picture} alt="Skill icon" className="skill-image" />
             <p className="text">{item.name}</p>
           </div>
         ))}

@@ -11,11 +11,11 @@ export function Header() {
         <button className="k">EN</button>
       </article>
       <ul className="navbar">
-        <li><a href="#main" className="navbar__element active">Домашняя</a></li>
-        <li><a href="#about" className="navbar__element">Обо мне</a></li>
-        <li><a href="#skills" className="navbar__element">Скиллы</a></li>
-        <li><a href="#projects" className="navbar__element">Проекты</a></li>
-        <li><a href="#contacts" className="navbar__element">Связаться</a></li>
+        <li><a href="#main" className="navbar__element active">ДОМАШНЯЯ</a></li>
+        <li><a href="#about" className="navbar__element">ОБО МНЕ</a></li>
+        <li><a href="#skills" className="navbar__element">СКИЛЛЫ</a></li>
+        <li><a href="#projects" className="navbar__element">ПРОЕКТЫ</a></li>
+        <li><a href="#contacts" className="navbar__element">КОНТАКТЫ</a></li>
       </ul>
     </nav>
   )
