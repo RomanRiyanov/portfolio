@@ -1,8 +1,18 @@
 import { useState } from 'react'
-
+import {ToolMenuPopup} from '../ToolMenuPopup/ToolMenuPopup'
 import './Header.scss'
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  function handleOpenPopup () {
+    setIsOpen(true)
+    console.log('open')
+  }
+
+  function handleClosePopup () {
+    setIsOpen(false)
+  }
 
   return (
     <nav id="header" className="header">
@@ -11,12 +21,14 @@ export function Header() {
         <button className="k">EN</button>
       </article>
       <ul className="navbar">
-        <li><a href="#main" className="navbar__element active">ДОМАШНЯЯ</a></li>
-        <li><a href="#about" className="navbar__element">ОБО МНЕ</a></li>
-        <li><a href="#skills" className="navbar__element">СКИЛЛЫ</a></li>
-        <li><a href="#projects" className="navbar__element">ПРОЕКТЫ</a></li>
-        <li><a href="#contacts" className="navbar__element">КОНТАКТЫ</a></li>
+        <li><a href="#main" className="navbar-element active">ДОМАШНЯЯ</a></li>
+        <li><a href="#about" className="navbar-element">ОБО МНЕ</a></li>
+        <li><a href="#skills" className="navbar-element">СКИЛЛЫ</a></li>
+        <li><a href="#projects" className="navbar-element">ПРОЕКТЫ</a></li>
+        <li><a href="#contacts" className="navbar-element">КОНТАКТЫ</a></li>
       </ul>
+      <button type='button' onClick={handleOpenPopup} className="button-tool-popup"/>
+      <ToolMenuPopup isOpen={isOpen} onClose={handleClosePopup}/>
     </nav>
   )
 }
