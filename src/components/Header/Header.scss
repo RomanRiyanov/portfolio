@@ -3,7 +3,7 @@
   z-index: 1;
   top: 0;
   display: flex;
-  width: calc(100vw - 20px);
+  width: calc(100vw - 15px);
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px;
@@ -66,4 +66,37 @@
   .button-tool-popup {
     display: flex;
   }
+}
+
+
+
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  animation: progress 1s linear;
+  background-color: #fff;
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+    background-color: rgb(20 255 226);
+  }
+}
+
+
+:root * {
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-fill-mode: both;
+
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+
+  /* Pause the animation */
+  animation-play-state: paused;
 }

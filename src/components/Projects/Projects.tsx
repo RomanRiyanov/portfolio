@@ -39,16 +39,11 @@ export function Projects() {
   const ref = useRef(null);
 
   function openPopup(item: Project) {
-    if (!item) {
-      console.log ('work');
-      return
-    }
-    else if (!isOpen) {
+    if (!isOpen) {
       setProject(item);
       setOpen(true)
       console.log('open')
     }
-
   }
 
   function closePopup() {
