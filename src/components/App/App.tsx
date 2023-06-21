@@ -10,6 +10,7 @@ import React, { useEffect } from 'react'
 
 export function App() {
 
+
   useEffect(() => {
 
     // функционал передвижения спутника
@@ -35,10 +36,8 @@ export function App() {
       // высчитать новое положение курсора
       pos1 = pos3 - e.clientX;
       pos2 = pos4 - e.clientY;
-      console.log(pos1, pos2)
       pos3 = e.clientX;
       pos4 = e.clientY;
-      console.log(e.target)
       // выставить новое положение элементу
       if(target === picture) {
         target.style.top = (target.offsetTop - pos2) + "px";
@@ -69,11 +68,13 @@ export function App() {
     }
 
     if (mouseOverContainer) mouseOverContainer.onmousemove = function(e) {
-      const position: [number, number, HTMLElement] = [e.clientX, e.clientY, picture];
+      if (picture) {
+        const position: [number, number, HTMLElement] = [e.clientX, e.clientY, picture];
 
-      window.requestAnimationFrame(function(){
-        transformElement(picture, position);
-      });
+        window.requestAnimationFrame(function(){
+          transformElement(picture, position);
+        });
+      }
     };
 
 
@@ -84,9 +85,9 @@ export function App() {
     const header = document.getElementById('header')
     window.onscroll = () => {
 
-      // navLink.forEach(link => {
-      //   link.classList.remove('active');
-      // })
+      navLink.forEach(link => {
+        link.classList.remove('active');
+      })
 
       const top = window.scrollY;
       if (top > 0) {
@@ -110,7 +111,7 @@ export function App() {
 
 
 
-      document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+      // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 
 
 

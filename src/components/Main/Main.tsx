@@ -1,9 +1,8 @@
 import './Main.scss'
 // import sputnik from '../../assets/images/sputnik.svg'
 // import sputnik from '../../assets/images/space-station.svg'
-// import sputnik from '../../assets/images/satellite1.svg'
+// import satellite from '../../assets/images/satellite1.svg'
 import sputnik from '../../assets/images/sputnik-round.png'
-
 
 export function Main() {
 
@@ -13,7 +12,7 @@ export function Main() {
         Привет, меня зовут <span>Риянов Рома</span>
       </h1>
       <h2 className="main-title">
-        Я - фронт-энд разработчик
+        Я - фронтенд разработчик
       </h2>
       <img id='picture' src={sputnik} alt="Спутник" className="main-image" />
     </section>
