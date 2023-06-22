@@ -39,7 +39,6 @@ export function Contacts() {
           </a>
         ))}
       </div>
-
     </section>
   )
 }

@@ -1,19 +1,7 @@
-import { useRef, useEffect } from 'react'
 import avatar from '../../assets/images/avatar.jpeg'
 import './About.scss'
-import satellite from '../../assets/images/satellite1.svg'
-import Rellax from 'rellax'
-
 
 export function About() {
-
-  const rellaxRef = useRef();
-
-  useEffect(() => {
-    new Rellax(rellaxRef.current, {
-      speed: -5,
-    });
-  }, []);
 
   return (
     <section id="about" className="about">
@@ -29,7 +17,6 @@ export function About() {
       <article className="about-imageContainer">
           <img src={avatar} alt="Avatar" className="about-image" />
       </article>
-      <img id='satellite' src={satellite} alt="Спутник" className="satellite" ref={rellaxRef}/>
     </section>
   )
 }

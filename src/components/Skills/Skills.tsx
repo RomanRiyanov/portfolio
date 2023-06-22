@@ -1,4 +1,8 @@
 import './Skills.scss'
+import { useRef, useEffect } from 'react'
+import satellite from '../../assets/images/satellite1.svg'
+import Rellax from 'rellax'
+
 import sputnik from '../../assets/images/sputnik.svg'
 import css from '../../assets/images/skills/css.svg'
 import eslint from '../../assets/images/skills/eslint.svg'
@@ -18,6 +22,14 @@ import webpack from '../../assets/images/skills/webpack.svg'
 
 
 export function Skills() {
+
+  const rellaxRef = useRef();
+
+  useEffect(() => {
+    new Rellax(rellaxRef.current, {
+      speed: -4,
+    });
+  }, []);
 
   const skills = [
     {
@@ -93,6 +105,8 @@ export function Skills() {
           </div>
         ))}
       </div>
+      <img id='satellite' src={satellite} alt="Спутник" className="satellite" ref={rellaxRef}/>
+
     </section>
   )
 }
