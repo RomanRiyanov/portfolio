@@ -11,9 +11,9 @@ export function Main() {
       <h1 className="main-title">
         Привет, меня зовут <span>Риянов Рома</span>
       </h1>
-      <h2 className="main-title">
-        Я - фронтенд разработчик
-      </h2>
+      <h1 className="main-title">
+        Я - <strong className='typing'></strong>
+      </h1>
       <img id='picture' src={sputnik} alt="Спутник" className="main-image" />
     </section>
   )

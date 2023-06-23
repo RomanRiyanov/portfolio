@@ -42,3 +42,29 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+.animate {
+  animation: 2s lineappearance ease-out;
+}
+
+@keyframes lineappearance {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

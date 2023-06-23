@@ -1,3 +1,5 @@
+@import '../../typed';
+
 .main {
   position: relative;
   display: flex;
@@ -27,6 +29,12 @@
     }
   }
 }
+
+.typing {
+  font: var(--font-h1);
+
+  @include typed("фронтенд разработчик", "фронт-энд разработчик", "frontend developer", "front-end developer", "iron man", null, (caret-width: 8px, caret-color: #5651E5));
+ }
 
 @media (width <= 560px) {
   .main-title {

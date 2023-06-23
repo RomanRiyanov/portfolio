@@ -1,3 +1,5 @@
+// @import 'typed';
+
 .about {
   display: grid;
   max-width: 1240px;
@@ -19,7 +21,7 @@
   }
 
   &-subtitle {
-    font: var(--font-h2)
+    font: var(--font-h2);
   }
 
   &-imageContainer {

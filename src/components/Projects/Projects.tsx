@@ -55,7 +55,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="projects">
-      <h3 className="projects-title">Проекты</h3>
+      <h3 id="projectssubtitle" className="projects-title">Проекты</h3>
       <h2 className="projects-subtitle">Что я уже сделал</h2>
       <div ref={ref} className="projects-container">
         {skills.map((item, index) => (

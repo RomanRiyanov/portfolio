@@ -95,7 +95,7 @@ export function Skills() {
   ]
   return (
     <section id="skills" className="skills">
-      <h3 className="skills-title">Скиллы</h3>
+      <h3 id="skillssubtitle" className="skills-title">Скиллы</h3>
       <h2 className="skills-subtitle">Что я могу</h2>
       <div className="skills-container">
         {skills.map((item, index) => (

@@ -83,6 +83,8 @@ export function App() {
     const sections = document.querySelectorAll('section');
     const navLink = document.querySelectorAll('nav a');
     const header = document.getElementById('header')
+
+    const subtitles = document.querySelectorAll('h3');
     window.onscroll = () => {
 
       navLink.forEach(link => {
@@ -97,6 +99,20 @@ export function App() {
         header?.classList.remove('scrolling');
       }
 
+      subtitles.forEach(subtitle => {
+        const offset = subtitle.offsetTop;
+        const height = subtitle.offsetHeight;
+        const id = subtitle.getAttribute('id');
+        // if (top > offset && top < offset + height) {
+          if (top < offset + 500) {
+          // subtitle.classList.add('animate');
+          // document.querySelector('h3[id*='+id+']')?.classList.add('animate');
+          subtitle?.classList.add('animate');
+          // document.getElementById(id)?.classList.add('animate');
+
+        }
+      })
+
       sections.forEach(section => {
         const offset = section.offsetTop - 150;
         const height = section.offsetHeight;
@@ -108,6 +124,8 @@ export function App() {
           })
         }
       })
+
+
 
 
 

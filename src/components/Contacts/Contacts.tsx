@@ -27,7 +27,7 @@ export function Contacts() {
   ]
   return (
     <section id="contacts" className="contacts">
-      <h3 className="contacts__title">Контакты</h3>
+      <h3 id="contactssubtitle" className="contacts__title">Контакты</h3>
       <h2 className="contacts__subtitle">Как со мной можно связаться</h2>
       <div className="contacts__container">
         {skills.map((item, index) => (
