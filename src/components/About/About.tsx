@@ -6,7 +6,7 @@ export function About() {
   return (
     <section id="about" className="about">
       <article className="about-container">
-        <h3 id='aboutsubtitle' className="about-title">Обо мне</h3>
+        <h3 id='aboutsubtitle' className="about-title"><span>Обо мне</span></h3>
         <h2 className="about-subtitle">Кто я такой</h2>
         <p className="text">
           Может показаться, что некоторые теги подходят для того, чтобы сделать страницу покрасивее,

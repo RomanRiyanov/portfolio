@@ -27,14 +27,14 @@ export function Contacts() {
   ]
   return (
     <section id="contacts" className="contacts">
-      <h3 id="contactssubtitle" className="contacts__title">Контакты</h3>
-      <h2 className="contacts__subtitle">Как со мной можно связаться</h2>
-      <div className="contacts__container">
+      <h3 id="contactssubtitle" className="contacts-title"><span>Контакты</span></h3>
+      <h2 className="contacts-subtitle">Как со мной можно связаться</h2>
+      <div className="contacts-container">
         {skills.map((item, index) => (
           <a href={item.link} target='_blank' key={index} className="contact">
             {item.cv ?
-              <p className="contacts__cv">{item.cv}</p> :
-              <img src={item.picture} alt="Contact icon" className="contact__image" />
+              <p className="contact-cv">{item.cv}</p> :
+              <img src={item.picture} alt="Contact icon" className="contact-image" />
             }
           </a>
         ))}

@@ -18,10 +18,12 @@
   &-title {
     color: var(--color-blue);
     font: var(--font-h3);
+    visibility: hidden;
   }
 
   &-subtitle {
     font: var(--font-h2);
+    visibility: hidden;
   }
 
   &-imageContainer {

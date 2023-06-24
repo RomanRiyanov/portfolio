@@ -10,11 +10,13 @@
   &-title {
     color: var(--color-blue);
     font: var(--font-h3);
+    visibility: hidden;
   }
 
   &-subtitle {
     margin: 0 0 40px;
     font: var(--font-h2);
+    visibility: hidden;
   }
 
   &-container {

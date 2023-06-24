@@ -10,13 +10,20 @@
   &-title {
     font: var(--font-h1);
 
-    & > span {
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: linear-gradient(60deg, #5651E5, #9ed8f7);
-      color: transparent;
-    }
+    // & > span {
+    //   -webkit-background-clip: text;
+    //   background-clip: text;
+    //   background-image: linear-gradient(60deg, #5651E5, #9ed8f7);
+    //   color: transparent;
+    // }
   }
+
+  // span {
+  //   -webkit-background-clip: text;
+  //   background-clip: text;
+  //   background-image: linear-gradient(60deg, #5651E5, #9ed8f7);
+  //   color: transparent;
+  // }
 
   &-image {
     position: absolute;
@@ -33,11 +40,15 @@
 .typing {
   font: var(--font-h1);
 
-  @include typed("фронтенд разработчик", "фронт-энд разработчик", "frontend developer", "front-end developer", "iron man", null, (caret-width: 8px, caret-color: #5651E5));
+  @include typed("фронтенд разработчик", "фронт-энд разработчик", "frontend developer", "front-end developer", "Iron Man", null, (caret-width: 8px, caret-color: #5651E5));
  }
 
 @media (width <= 560px) {
   .main-title {
+    font: var(--font-title-small);
+  }
+
+  .typing {
     font: var(--font-title-small);
   }
 }

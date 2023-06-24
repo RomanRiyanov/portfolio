@@ -43,9 +43,16 @@ html {
   scroll-behavior: smooth;
 }
 
+span {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(60deg, #5651E5, #9ed8f7);
+  color: transparent;
+}
 
 .animate {
   animation: 2s lineappearance ease-out;
+  visibility: visible;
 }
 
 @keyframes lineappearance {

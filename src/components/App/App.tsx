@@ -84,34 +84,19 @@ export function App() {
     const navLink = document.querySelectorAll('nav a');
     const header = document.getElementById('header')
 
-    const subtitles = document.querySelectorAll('h3');
     window.onscroll = () => {
+      const top = window.scrollY;
 
       navLink.forEach(link => {
         link.classList.remove('active');
       })
 
-      const top = window.scrollY;
       if (top > 0) {
         header?.classList.add('scrolling');
       }
       if (top === 0) {
         header?.classList.remove('scrolling');
       }
-
-      subtitles.forEach(subtitle => {
-        const offset = subtitle.offsetTop;
-        const height = subtitle.offsetHeight;
-        const id = subtitle.getAttribute('id');
-        // if (top > offset && top < offset + height) {
-          if (top < offset + 500) {
-          // subtitle.classList.add('animate');
-          // document.querySelector('h3[id*='+id+']')?.classList.add('animate');
-          subtitle?.classList.add('animate');
-          // document.getElementById(id)?.classList.add('animate');
-
-        }
-      })
 
       sections.forEach(section => {
         const offset = section.offsetTop - 150;
@@ -125,14 +110,19 @@ export function App() {
         }
       })
 
+      // функционал анимированного появления заголовков
 
-
-
-
-      // document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-
-
-
+      const subtitles = document.querySelectorAll('h3, h2');
+      const animateSubtitle = (entries: any, observer: any) => {
+        entries.forEach((entry: any) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target)
+          }
+        })
+      }
+      const observer = new IntersectionObserver(animateSubtitle)
+      subtitles.forEach((subtitle) => observer.observe(subtitle))
     }
   }, [])
 

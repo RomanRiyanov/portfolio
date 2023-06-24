@@ -10,11 +10,13 @@
   &-title {
     color: var(--color-blue);
     font: var(--font-h3);
+    visibility: hidden;
   }
 
   &-subtitle {
     margin: 0 0 40px;
     font: var(--font-h2);
+    visibility: hidden;
   }
 
   &-container {
@@ -49,33 +51,14 @@
   }
 }
 
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 40%;
-  border-radius: 20px;
-  background-color: var(--color-background);
-  box-shadow: 10px 10px 20rem 20rem rgb(88 81 94 / 80%);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.8s ease;
-  visibility: hidden;
-
-  &-viewable{
-    opacity: 1;
-    transition: all 0.8s ease;
-    visibility: visible;
-  }
-}
-
 .button-close-tool-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: block;
   width: 22px;
   height: 22px;
   border: none;
-  margin: 22px 22px 105px auto;
   background-image: url("../../assets/images/closeButton.svg");
   background-position: center;
   background-repeat: none;
@@ -84,6 +67,57 @@
     cursor: pointer;
   }
 }
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 40%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--color-background);
+  box-shadow: 10px 10px 20rem 20rem rgb(88 81 94 / 80%);
+  opacity: 0;
+  text-align: start;
+  transform: translate(-50%, -50%);
+  transition: all 0.8s ease;
+  visibility: hidden;
+
+  &-viewable {
+    opacity: 1;
+    transition: all 0.8s ease;
+    visibility: visible;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+    font: var(--font-h2);
+  }
+
+  &-intro {
+    margin-bottom: 20px;
+    font: var(--font-h3);
+  }
+
+  &-description {
+    max-width: 80%;
+    margin-bottom: 20px;
+    font: var(--font-text);
+  }
+
+  &-stack {
+    font: var(--font-caption);
+  }
+
+  &-link {
+    color: var(--color-blue);
+    font: var(--font-caption);
+    text-decoration: none
+  }
+}
+
+
 
 @media (width <= 1024px) {
   .projects-container {

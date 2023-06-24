@@ -7,37 +7,70 @@
   align-items: start;
   justify-content: center;
   text-align: left;
+
+  &-title {
+    color: var(--color-blue);
+    font: var(--font-h3);
+    visibility: hidden;
+  }
+
+  &-subtitle {
+    margin: 0 0 40px;
+    font: var(--font-h2);
+    visibility: hidden;
+  }
+
+  &-container {
+    display: grid;
+    align-self: center;
+    gap: 30px;
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: 64px;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    background: url('../../assets/images/space-station.svg');
+    background-position: 5%;
+    background-repeat: no-repeat;
+    content: "";
+    inset: 0;
+    opacity: 0.1;
+  }
 }
 
-.contacts::after {
-  position: absolute;
-  z-index: -1;
-  background: url('../../assets/images/space-station.svg');
-  background-position: 5%;
-  background-repeat: no-repeat;
-  content: "";
-  inset: 0;
-  opacity: 0.1;
-}
+// .contacts::after {
+//   position: absolute;
+//   z-index: -1;
+//   background: url('../../assets/images/space-station.svg');
+//   background-position: 5%;
+//   background-repeat: no-repeat;
+//   content: "";
+//   inset: 0;
+//   opacity: 0.1;
+// }
 
-.contacts__title {
-  color: var(--color-blue);
-  font: var(--font-h3);
-}
+// .contacts__title {
+//   color: var(--color-blue);
+//   font: var(--font-h3);
+//   visibility: hidden;
+// }
 
-.contacts__subtitle {
-  margin: 0 0 40px;
-  font: var(--font-h2);
+// .contacts__subtitle {
+//   margin: 0 0 40px;
+//   font: var(--font-h2);
+//   visibility: hidden;
 
-}
+// }
 
-.contacts__container {
-  display: grid;
-  align-self: center;
-  gap: 30px;
-  grid-template-columns: repeat(4, 64px);
-  grid-template-rows: 64px;
-}
+// .contacts__container {
+//   display: grid;
+//   align-self: center;
+//   gap: 30px;
+//   grid-template-columns: repeat(4, 64px);
+//   grid-template-rows: 64px;
+// }
 
 .contact {
   border-radius: 50%;
@@ -47,23 +80,41 @@
   text-decoration: none;
   transition: all 0.3s ease;
 
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+
+  &-image {
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &-cv {
+    font: var(--font-h3);
+    text-align: center;
+    text-decoration: none;
+  }
+
 }
 
-.contact:hover {
-  cursor: pointer;
-  scale: 1.1;
-}
+// .contact:hover {
+//   cursor: pointer;
+//   scale: 1.1;
+// }
 
 
-.contact__image {
-  width: 100%;
-  border-radius: 50px;
-  object-fit: cover;
-  object-position: top;
-}
+// .contact__image {
+//   width: 100%;
+//   border-radius: 50px;
+//   object-fit: cover;
+//   object-position: top;
+// }
 
-.contacts__cv {
-  font: var(--font-h3);
-  text-align: center;
-  text-decoration: none;
-}
+// .contacts__cv {
+//   font: var(--font-h3);
+//   text-align: center;
+//   text-decoration: none;
+// }
