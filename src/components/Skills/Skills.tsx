@@ -3,7 +3,6 @@ import { useRef, useEffect } from 'react'
 import satellite from '../../assets/images/satellite1.svg'
 import Rellax from 'rellax'
 
-import sputnik from '../../assets/images/sputnik.svg'
 import css from '../../assets/images/skills/css.svg'
 import eslint from '../../assets/images/skills/eslint.svg'
 import figma from '../../assets/images/skills/figma.svg'
@@ -23,7 +22,7 @@ import webpack from '../../assets/images/skills/webpack.svg'
 
 export function Skills() {
 
-  const rellaxRef = useRef();
+  const rellaxRef: any = useRef();
 
   useEffect(() => {
     new Rellax(rellaxRef.current, {

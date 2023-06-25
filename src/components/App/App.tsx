@@ -6,7 +6,7 @@ import { Projects } from '../Projects/Projects'
 import { Contacts } from '../Contacts/Contacts'
 
 import './App.scss'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 export function App() {
 
