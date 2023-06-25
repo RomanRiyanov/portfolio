@@ -27,8 +27,6 @@ export function Header() {
         <li><a href="#projects" className="navbar-element">ПРОЕКТЫ</a></li>
         <li><a href="#contacts" className="navbar-element">КОНТАКТЫ</a></li>
       </ul>
-      <div className="progress"></div>
-
       <button type='button' onClick={handleOpenPopup} className="button-tool-popup"/>
       <ToolMenuPopup isOpen={isOpen} onClose={handleClosePopup}/>
     </nav>
