@@ -19,7 +19,6 @@ import typescript from '../../assets/images/skills/typescript.svg'
 import vite from '../../assets/images/skills/vite.svg'
 import webpack from '../../assets/images/skills/webpack.svg'
 
-
 export function Skills() {
 
   const rellaxRef: any = useRef();

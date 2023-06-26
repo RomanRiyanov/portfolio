@@ -40,38 +40,6 @@
   }
 }
 
-// .contacts::after {
-//   position: absolute;
-//   z-index: -1;
-//   background: url('../../assets/images/space-station.svg');
-//   background-position: 5%;
-//   background-repeat: no-repeat;
-//   content: "";
-//   inset: 0;
-//   opacity: 0.1;
-// }
-
-// .contacts__title {
-//   color: var(--color-blue);
-//   font: var(--font-h3);
-//   visibility: hidden;
-// }
-
-// .contacts__subtitle {
-//   margin: 0 0 40px;
-//   font: var(--font-h2);
-//   visibility: hidden;
-
-// }
-
-// .contacts__container {
-//   display: grid;
-//   align-self: center;
-//   gap: 30px;
-//   grid-template-columns: repeat(4, 64px);
-//   grid-template-rows: 64px;
-// }
-
 .contact {
   border-radius: 50%;
   background-color: var(--color-background);
@@ -97,24 +65,4 @@
     text-align: center;
     text-decoration: none;
   }
-
 }
-
-// .contact:hover {
-//   cursor: pointer;
-//   scale: 1.1;
-// }
-
-
-// .contact__image {
-//   width: 100%;
-//   border-radius: 50px;
-//   object-fit: cover;
-//   object-position: top;
-// }
-
-// .contacts__cv {
-//   font: var(--font-h3);
-//   text-align: center;
-//   text-decoration: none;
-// }

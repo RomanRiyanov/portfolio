@@ -1,4 +1,4 @@
-// @import 'typed';
+/* stylelint-disable media-feature-range-notation */
 
 .about {
   display: grid;
@@ -41,5 +41,15 @@
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+
+    &-imageContainer {
+      width: 100%;
+    }
   }
 }

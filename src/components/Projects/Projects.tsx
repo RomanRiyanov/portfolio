@@ -1,6 +1,4 @@
-import { useState, useRef } from 'react'
-import { useEscapeKey } from '../../hooks/useEscapeKey'
-import { useOutsideClick } from '../../hooks/useOutsideClick'
+import { JSX, useRef } from 'react'
 import './Projects.scss'
 import moodBeat from '../../assets/images/projects/moodbeat.png'
 import instagram from '../../assets/images/projects/instagram.png'
@@ -9,7 +7,7 @@ import travelRussia from '../../assets/images/projects/travelRussia.png'
 import wonders from '../../assets/images/projects/wonders.png'
 import calculator from '../../assets/images/projects/calculator.png'
 
-interface Project {
+export interface Project {
   name: string,
   picture: string,
   intro: string,
@@ -52,7 +50,7 @@ const projects = [
     name: 'Seven Wonders',
     picture: wonders,
     intro: 'Бесконечный слайдер',
-    description: `Работа, сделанная с целью реализовать сладер для изображений без использования готовых библиотек.
+    description: `Работа, сделанная с целью реализовать слайдер для изображений без использования готовых библиотек.
       Были использованы возможности TS и RTK, настроен роутинг между главной страницей и страницей с показом набора карточек. Добавлена возможность ставить лайки карточкам и сохранять состояние при навигации по сайту. Проект линтирован с помощью ESLint.`,
     stack: 'TypeScript, React, Redux Toolkit, ESLint',
     link: 'https://infinite-slider.netlify.app',
@@ -76,7 +74,7 @@ const projects = [
     name: 'Drag-n-Drop Calculator',
     picture: calculator,
     intro: 'Сборный калькулятор',
-    description: `Проект для демонстрации технологии drag-n-drop, использована библиотека react-beautiful-dnd. Экран калькулятора вы можете перенести только в верхнюю область конструктора. Кодовая база написана на TypeScript, состояние runtime/constructor хранится и все математические рассчеты выполняются в store RTK. В стилях используется препроцессор SCSS и библиотека classnames.`,
+    description: `Проект для демонстрации технологии drag-n-drop, использована библиотека react-beautiful-dnd. Экран калькулятора вы можете перенести только в верхнюю область конструктора. Кодовая база написана на TypeScript, в store RTK хранится состояние runtime/constructor и выполняются все математические рассчеты. В стилях используется препроцессор SCSS и библиотека classnames.`,
     stack: 'TypeScript, React, Redux Toolkit, ESLint, SCSS',
     link: 'https://drag-n-drop-calc.netlify.app/',
   },
@@ -84,33 +82,23 @@ const projects = [
     name: 'TravelRussia',
     picture: travelRussia,
     intro: 'Сайт - лендинг',
-    description: 'Пример простого демонстрационного одностраничника. Дизайн взят из макета в программе Figma, вёрстка - PixelPerfect. Чередование флексбокса, грид-сетки и нежёсткого задания размеров позволяет подстраивать сайт под различные устройства. С помощью @media запросов отделены брейпойнты отображения',
+    description: 'Пример простого демонстрационного одностраничника. Дизайн взят из макета в программе Figma, вёрстка - PixelPerfect. Чередование флексбокса, грид-сетки и нежёсткого задания размеров позволяет подстраивать сайт под различные устройства. С помощью @media запросов отделены брейпойнты отображения.',
     stack: 'JavaScript, HTML, CSS, Flexbox Layout, Grid Layout, Adaptive Design',
     link: 'https://romanriyanov.github.io/russian-travel-look/index.html',
   }
 ]
 
-export function Projects() {
+interface ProjectsProps {
+  handleOpenProject: (project: Project) => void,
+}
 
-  const [isOpen, setOpen] = useState<boolean>(false)
-  const [project, setProject] = useState<Project>();
+export function Projects({handleOpenProject}: ProjectsProps): JSX.Element {
 
   const ref = useRef(null);
 
   function openPopup(item: Project) {
-    if (!isOpen) {
-      setProject(item);
-      setOpen(true)
-      console.log('open')
-    }
+    handleOpenProject(item);
   }
-
-  function closePopup() {
-    setOpen(false)
-  }
-
-  useEscapeKey(closePopup);
-  useOutsideClick(closePopup, ref);
 
   return (
     <section id="projects" className="projects">
@@ -122,14 +110,6 @@ export function Projects() {
             <img src={item.picture} alt="Skill icon" className="project-image" />
           </div>
         ))}
-      </div>
-      <div ref={ref} className={`popup ${isOpen ? 'popup-viewable': ''}`}>
-        <h4 className='popup-title'><span>{project?.name}</span></h4>
-        <p className='popup-intro'>{project?.intro}</p>
-        <p className='popup-description'>{project?.description}</p>
-        <p className='popup-stack'><strong>Стек:</strong> {project?.stack}</p>
-        <a className='popup-link' href={project?.link} target='_blank'>Открыть проект</a>
-        <button type="button" onClick={closePopup} className='button-close-tool-popup'></button>
       </div>
     </section>
   )

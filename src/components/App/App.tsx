@@ -4,9 +4,11 @@ import { About } from '../About/About'
 import { Skills } from '../Skills/Skills'
 import { Projects } from '../Projects/Projects'
 import { Contacts } from '../Contacts/Contacts'
+import { ProjectPopup } from '../ProjectPopup/ProjectPopup'
+import { Project } from '../Projects/Projects'
 
 import './App.scss'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export function App() {
 
@@ -126,14 +128,27 @@ export function App() {
     }
   }, [])
 
+  const [project, setProject] = useState<Project | null>(null);
+  const [isOpen, setOpen] = useState<boolean>(false);
+
+  function handleOpenProject(project: Project) {
+    if (project) setProject(project);
+    setOpen(true);
+  }
+
+  function handleCloseProject () {
+    setOpen(false);
+  }
+
   return (
     <main className='page'>
       <Header/>
       <Main/>
       <About />
       <Skills />
-      <Projects />
+      <Projects handleOpenProject={handleOpenProject}/>
       <Contacts/>
+      <ProjectPopup isOpen={isOpen} onClose={handleCloseProject} project={project}/>
     </main>
   )
 }

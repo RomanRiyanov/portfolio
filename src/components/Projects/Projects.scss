@@ -1,7 +1,6 @@
 /* stylelint-disable media-feature-range-notation */
 
 .projects {
-  position: relative;
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -68,58 +67,6 @@
     cursor: pointer;
   }
 }
-
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 40%;
-  padding: 40px;
-  border-radius: 20px;
-  background-color: var(--color-background);
-  box-shadow: 10px 10px 20rem 20rem rgb(88 81 94 / 80%);
-  opacity: 0;
-  text-align: start;
-  transform: translate(-50%, -50%);
-  transition: all 0.8s ease;
-  visibility: hidden;
-
-  &-viewable {
-    opacity: 1;
-    transition: all 0.8s ease;
-    visibility: visible;
-  }
-
-  &-title {
-    margin-bottom: 20px;
-    font: var(--font-h2);
-  }
-
-  &-intro {
-    margin-bottom: 20px;
-    font: var(--font-h3);
-  }
-
-  &-description {
-    max-width: 80%;
-    margin-bottom: 20px;
-    font: var(--font-text);
-    white-space: pre-line;
-  }
-
-  &-stack {
-    font: var(--font-caption);
-  }
-
-  &-link {
-    color: var(--color-blue);
-    font: var(--font-caption);
-    text-decoration: none
-  }
-}
-
-
 
 @media (max-width: 1024px) {
   .projects-container {
