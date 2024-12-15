@@ -10,7 +10,7 @@ export function Contacts() {
     {
       cv: 'CV',
       picture: cv,
-      link: 'https://github.com/RomanRiyanov/resume/blob/main/Frontend_developer_resume_Roman_Riyanov.pdf',
+      link: 'https://github.com/RomanRiyanov/resume/blob/main/Frontend_CV_Roman_Riyanov.pdf',
     },
     {
       picture: telegram,

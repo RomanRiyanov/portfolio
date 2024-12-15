@@ -28,7 +28,7 @@ export function ProjectPopup ({isOpen, onClose, project}: ProjectPopupProps): JS
         <p className='project-popup-intro'>{project?.intro}</p>
         <p className='project-popup-description'>{project?.description}</p>
         <p className='project-popup-stack'><strong>Стек:</strong> {project?.stack}</p>
-        <a className='project-popup-link' href={project?.link} target='_blank'>Открыть проект</a>
+        {project?.link && <a className='project-popup-link' href={project?.link} target='_blank'>Открыть проект</a>}
         <button type="button" onClick={handleCloseButton} className='button-close-tool-popup'></button>
       </div>
     </article>

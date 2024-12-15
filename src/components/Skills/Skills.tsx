@@ -18,6 +18,8 @@ import tailwind from '../../assets/images/skills/tailwind.svg'
 import typescript from '../../assets/images/skills/typescript.svg'
 import vite from '../../assets/images/skills/vite.svg'
 import webpack from '../../assets/images/skills/webpack.svg'
+import vue from '../../assets/images/skills/vue.svg'
+import pinia from '../../assets/images/skills/pinia.svg'
 
 export function Skills() {
 
@@ -45,6 +47,14 @@ export function Skills() {
     {
       name: 'TypeScript',
       picture: typescript
+    },
+    {
+      name: 'Vue',
+      picture: vue
+    },
+    {
+      name: 'Pinia',
+      picture: pinia
     },
     {
       name: 'React',

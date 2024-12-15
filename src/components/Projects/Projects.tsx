@@ -13,7 +13,7 @@ export interface Project {
   intro: string,
   description: string,
   stack: string,
-  link: string,
+  link?: string,
 }
 
 const projects = [
@@ -31,7 +31,6 @@ const projects = [
     email: employee1@example.com,
     password: EmployeeTestPass123`,
     stack: 'Vite, TypeScript, CSS Modules / SCSS, Redux Toolkit, Axios, WebSocket, StoryBook, ESLint, Stylelint',
-    link: 'https://mood-beap.netlify.app',
   },
   {
     name: 'Mesto',
@@ -68,7 +67,6 @@ const projects = [
       - редактирование профиля
       - валидация форм`,
     stack: 'JS, React, Express.js, MongoDB, ESLint, Webpack, Git, Formik, Joi, Celebrate',
-    link: 'https://roman.diploma.nomoredomains.icu',
   },
   {
     name: 'Drag-n-Drop Calculator',
